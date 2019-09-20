@@ -177,7 +177,7 @@ var NodeAdapter = Class({ className: 'NodeAdapter',
         headers['Content-Length'] = Buffer.from(body, 'utf8').length.toString();
 
         this.debug('HTTP response: ?', body);
-        response.writeHead(200, headers);
+        response.writeHead( request.statusCode || 200, headers);
         response.end(body);
       }, this);
     } catch (error) {
