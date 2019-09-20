@@ -89,6 +89,7 @@ var Server = Class({ className: 'Server',
     if (message.clientId) response.clientId = message.clientId;
     if (message.channel)  response.channel  = message.channel;
     if (message.error)    response.error    = message.error;
+    if (message.data)     response.data    = message.data;
 
     response.successful = !response.error;
     return response;
